@@ -61,12 +61,10 @@ export default function ServicesPage() {
       <section className="py-16 md:py-20">
         <Container>
           <div className="space-y-16">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <article
                 key={service.id}
-                className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start"
               >
                 {/* Icon */}
                 <div className="flex-shrink-0">
