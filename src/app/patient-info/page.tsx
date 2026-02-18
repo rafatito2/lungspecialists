@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 import { insuranceProviders, insuranceNote } from "@/data/insurance";
 
 export const metadata: Metadata = {
@@ -14,8 +15,9 @@ export default function PatientInfoPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-primary-50 py-16 md:py-20">
-        <Container>
+      <section className="relative bg-gradient-to-b from-primary-50 to-white py-16 md:py-20 overflow-hidden">
+        <MedicalBackground variant="light" />
+        <Container className="relative">
           <SectionHeading
             title="Patient Information"
             subtitle="Everything you need to know before your visit"
@@ -215,7 +217,8 @@ export default function PatientInfoPage() {
       </section>
 
       {/* Insurance */}
-      <section className="bg-neutral-50 py-16 md:py-20">
+      <section className="relative bg-slate-50 py-16 md:py-20 overflow-hidden">
+        <MedicalBackground variant="light" />
         <Container>
           <SectionHeading
             title="Accepted Insurance"

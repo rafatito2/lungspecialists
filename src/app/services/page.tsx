@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -45,8 +46,9 @@ export default function ServicesPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-primary-50 py-16 md:py-20">
-        <Container>
+      <section className="relative bg-gradient-to-b from-primary-50 to-white py-16 md:py-20 overflow-hidden">
+        <MedicalBackground variant="light" />
+        <Container className="relative">
           <SectionHeading
             title="Our Services"
             subtitle="Comprehensive pulmonary and sleep medicine care in Fort Lauderdale"
@@ -87,19 +89,20 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA section */}
-      <section className="bg-neutral-50 py-16 md:py-20">
+      <section className="relative bg-primary-600 py-16 md:py-20 overflow-hidden">
+        <MedicalBackground variant="dark" />
         <Container>
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-neutral-900">
+          <div className="relative text-center">
+            <h2 className="text-2xl font-bold text-white">
               Ready to Schedule an Appointment?
             </h2>
-            <p className="mt-4 text-neutral-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-primary-200 max-w-2xl mx-auto">
               Request an appointment online or call our office directly. We look forward to caring
               for you.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/appointment">Request an Appointment</Button>
-              <Button href="tel:+1XXXXXXXXXX" variant="outline">
+              <Button href="tel:+19547716047" variant="outline" className="!border-white !text-white hover:!bg-white hover:!text-primary-700">
                 Call Us
               </Button>
             </div>

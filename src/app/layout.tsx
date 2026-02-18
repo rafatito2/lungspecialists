@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     template: "%s | Lung Disease Specialists",
   },
   description:
-    "Board-certified pulmonary and sleep medicine specialists in Fort Lauderdale, FL. Dr. Gabriel Romero Fishman and Dr. Eric Palma provide expert care for lung conditions, sleep disorders, and pulmonary function testing.",
+    "Board-certified pulmonary and sleep medicine specialists in Fort Lauderdale, FL. Dr. David Romero Fischmann and Dr. Eric Palma provide expert care for lung conditions, sleep disorders, and pulmonary function testing.",
   keywords: [
     "pulmonary doctor Fort Lauderdale",
     "sleep medicine Fort Lauderdale",
     "lung specialist Florida",
     "pulmonary function test",
     "sleep study Fort Lauderdale",
-    "Dr Gabriel Romero Fishman",
+    "Dr David Romero Fischmann",
     "Dr Eric Palma",
     "Lung Disease Specialists",
   ],

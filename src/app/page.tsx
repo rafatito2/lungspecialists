@@ -4,6 +4,7 @@ import ServicesOverview from "@/components/home/ServicesOverview";
 import ReviewsSection from "@/components/home/ReviewsSection";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 
 export default function HomePage() {
   return (
@@ -23,15 +24,16 @@ export default function HomePage() {
       {/* Final CTA section */}
       <section className="py-16 md:py-20">
         <Container>
-          <div className="bg-primary-600 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <div className="relative bg-primary-600 rounded-2xl p-8 md:p-12 text-center overflow-hidden">
+            <MedicalBackground variant="dark" />
+            <h2 className="relative text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Take the Next Step?
             </h2>
-            <p className="text-primary-100 text-lg max-w-2xl mx-auto mb-8">
+            <p className="relative text-primary-100 text-lg max-w-2xl mx-auto mb-8">
               Whether you need pulmonary care, a sleep study, or lung function testing, our team
               is here to help. Request an appointment today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="relative flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/appointment" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-primary-600">
                 Request an Appointment
               </Button>

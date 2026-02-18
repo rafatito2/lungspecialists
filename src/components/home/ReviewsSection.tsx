@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 import { reviews } from "@/data/reviews";
 
 function StarRating({ rating }: { rating: number }) {
@@ -21,8 +22,9 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-neutral-50 py-16 md:py-20 lg:py-24">
-      <Container>
+    <section className="relative bg-slate-50 py-16 md:py-20 lg:py-24 overflow-hidden">
+      <MedicalBackground variant="light" />
+      <Container className="relative">
         <SectionHeading
           title="What Our Patients Say"
           subtitle="Read about the experiences of patients who have trusted us with their care"
@@ -37,20 +39,20 @@ export default function ReviewsSection() {
             >
               <div className="flex items-center justify-between mb-4">
                 <StarRating rating={review.rating} />
-                <span className="text-sm text-neutral-500">{review.date}</span>
+                <span className="text-sm text-neutral-400">{review.date}</span>
               </div>
 
-              <blockquote className="text-neutral-700 mb-4">
+              <blockquote className="text-neutral-600 mb-4">
                 &ldquo;{review.text}&rdquo;
               </blockquote>
 
-              <p className="font-medium text-neutral-900">{review.name}</p>
+              <p className="font-semibold text-neutral-800">{review.name}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-neutral-600">
+          <p className="text-neutral-500">
             We value your feedback. These reviews help us continue to provide excellent care.
           </p>
         </div>

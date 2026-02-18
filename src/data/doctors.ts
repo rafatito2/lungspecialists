@@ -10,10 +10,10 @@ export interface Doctor {
 export const doctors: Doctor[] = [
   {
     id: "dr-fishman",
-    name: "Dr. Gabriel Romero Fishman",
+    name: "Dr. David Romero Fischmann",
     title: "MD",
     role: "Owner & Pulmonologist",
-    bio: `Dr. Gabriel Romero Fishman is a board-certified pulmonologist and critical care medicine specialist. He is a Diplomate of the American Board of Internal Medicine and Pulmonary Disease, and a Fellow of the American College of Chest Physicians. Dr. Fishman brings extensive experience in treating a wide range of respiratory conditions and sleep disorders, providing personalized, compassionate care to patients throughout the Fort Lauderdale area.`,
+    bio: `Dr. David Romero Fischmann is a board-certified pulmonologist and critical care medicine specialist. He is a Diplomate of the American Board of Internal Medicine and Pulmonary Disease, and a Fellow of the American College of Chest Physicians. Dr. Romero Fischmann brings extensive experience in treating a wide range of respiratory conditions and sleep disorders, providing personalized, compassionate care to patients throughout the Fort Lauderdale area.`,
     credentials: [
       "Diplomate, American Board of Internal Medicine",
       "Diplomate, American Board of Pulmonary Disease",

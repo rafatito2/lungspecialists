@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 
 export default function HeroSection() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -74,7 +75,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-primary-50 to-white py-20 md:py-32 lg:py-40 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary-50 via-white to-white py-20 md:py-32 lg:py-40 overflow-hidden">
       <Container>
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-8 items-center">
           {/* Left column — text content */}
@@ -174,8 +175,7 @@ export default function HeroSection() {
         </div>
       </Container>
 
-      {/* Decorative blob */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-2/3 bg-primary-100/50 rounded-l-full hidden lg:block -z-10" />
+      <MedicalBackground variant="light" />
     </section>
   );
 }

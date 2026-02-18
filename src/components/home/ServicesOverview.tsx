@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 import { services } from "@/data/services";
 
 const iconMap = {
@@ -36,8 +37,9 @@ const iconMap = {
 
 export default function ServicesOverview() {
   return (
-    <section className="py-16 md:py-20 lg:py-24">
-      <Container>
+    <section className="relative py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
+      <MedicalBackground variant="light" />
+      <Container className="relative">
         <SectionHeading
           title="Our Services"
           subtitle="Comprehensive pulmonary and sleep medicine care tailored to your needs"

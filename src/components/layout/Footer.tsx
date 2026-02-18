@@ -22,7 +22,7 @@ export default function Footer() {
               and the surrounding South Florida community.
             </p>
             <p className="text-sm text-neutral-500">
-              Dr. Gabriel Romero Fishman & Dr. Eric Palma
+              Dr. David Romero Fischmann & Dr. Eric Palma
             </p>
           </div>
 

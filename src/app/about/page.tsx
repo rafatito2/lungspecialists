@@ -2,20 +2,22 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 import { doctors } from "@/data/doctors";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Meet Dr. Gabriel Romero Fishman and Dr. Eric Palma, board-certified pulmonologists at Lung Disease Specialists in Fort Lauderdale, FL. Learn about our practice and commitment to patient care.",
+    "Meet Dr. David Romero Fischmann and Dr. Eric Palma, board-certified pulmonologists at Lung Disease Specialists in Fort Lauderdale, FL. Learn about our practice and commitment to patient care.",
 };
 
 export default function AboutPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-primary-50 py-16 md:py-20">
-        <Container>
+      <section className="relative bg-gradient-to-b from-primary-50 to-white py-16 md:py-20 overflow-hidden">
+        <MedicalBackground variant="light" />
+        <Container className="relative">
           <SectionHeading
             title="About Our Practice"
             subtitle="Dedicated to providing exceptional pulmonary and sleep medicine care in Fort Lauderdale"
@@ -52,8 +54,9 @@ export default function AboutPage() {
       </section>
 
       {/* Doctors */}
-      <section className="bg-neutral-50 py-16 md:py-20">
-        <Container>
+      <section className="relative bg-slate-50 py-16 md:py-20 overflow-hidden">
+        <MedicalBackground variant="light" />
+        <Container className="relative">
           <SectionHeading title="Meet Our Physicians" centered className="mb-12" />
 
           <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">

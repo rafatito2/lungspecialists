@@ -1,10 +1,12 @@
 import Container from "@/components/ui/Container";
+import MedicalBackground from "@/components/ui/MedicalBackground";
 
 export default function LocationHighlight() {
   return (
-    <section className="bg-primary-600 py-12 md:py-16">
+    <section className="relative bg-primary-600 py-12 md:py-16 overflow-hidden">
+      <MedicalBackground variant="dark" />
       <Container>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="text-white">
             <div className="flex items-center gap-2 mb-2">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -46,5 +48,6 @@ export default function LocationHighlight() {
         </div>
       </Container>
     </section>
+
   );
 }
