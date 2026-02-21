@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
@@ -16,45 +17,42 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-neutral-200">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
+      {/* Gradient accent bar — teal → cobalt, mirrors the logo's two colours */}
+      <div
+        className="h-1 w-full"
+        style={{ background: "linear-gradient(to right, #29C4BF, #3a66d4, #2B56C5)" }}
+      />
+
       <Container>
-        <nav className="flex items-center justify-between py-4">
+        <nav className="flex items-center justify-between py-3">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            {/* Placeholder logo - lungs icon */}
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                viewBox="0 0 32 32"
-              >
-                <path d="M14,18c0,1.2,0,0.5,0,2c0,6.8-2,7.3-5,7.3c-2.8,0-6,5.8-6-3.8S8.2,6,11.3,6c0.8,0,1.5,0.3,1.9,1.9" />
-                <path d="M18,18c0,1.2,0,0.5,0,2c0,6.8,2,7.3,5,7.3c2.8,0,6,5.8,6-3.8S23.8,6,20.8,6c-0.8,0-1.5,0.3-1.9,1.9" />
-                <path d="M16,2v6.6c0,1.5-0.7,3-1.9,4L10,16" />
-                <path d="M16,8.6c0,1.5,0.7,3,1.9,4L22,16" />
-              </svg>
-            </div>
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image
+              src="/lung_logo.png"
+              alt="Lung Disease Specialists Logo"
+              width={46}
+              height={46}
+              className="rounded-full"
+              priority
+            />
             <div className="hidden sm:block">
-              <span className="text-lg font-bold text-neutral-900">
+              <span className="text-[15px] font-bold text-neutral-900 block leading-tight tracking-tight">
                 Lung Disease Specialists
               </span>
-              <span className="block text-xs text-neutral-500">
-                Pulmonary & Sleep Medicine
+              <span className="text-[11px] text-neutral-500 tracking-wide uppercase">
+                Pulmonary &amp; Sleep Medicine
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-neutral-600 hover:text-primary-600 font-medium transition-colors"
+                className="text-sm text-neutral-600 hover:text-primary-600 font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -85,13 +83,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-neutral-200">
+          <div className="md:hidden py-4 border-t border-neutral-100">
             <div className="flex flex-col gap-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-neutral-600 hover:text-primary-600 font-medium transition-colors"
+                  className="text-neutral-600 hover:text-primary-600 font-medium transition-colors duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

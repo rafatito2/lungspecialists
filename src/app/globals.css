@@ -1,23 +1,26 @@
 @import "tailwindcss";
 
 /* Design System - Lung Disease Specialists */
+/* Color palette derived from company logo:
+   - Primary (cobalt blue): the lung icon color  ~#2B56C5
+   - Accent  (teal/cyan):   the circle background ~#29C4BF  */
 :root {
-  /* Primary - Medical Blue */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
+  /* Primary - Cobalt Blue (logo lung color) */
+  --color-primary-50: #eef2fb;
+  --color-primary-100: #d5e1f7;
+  --color-primary-200: #acc2ef;
+  --color-primary-300: #7a9de5;
+  --color-primary-400: #4d78da;
+  --color-primary-500: #3a66d4;
+  --color-primary-600: #2B56C5;
+  --color-primary-700: #2248a8;
+  --color-primary-800: #1a3888;
+  --color-primary-900: #122868;
 
-  /* Accent - Warm Teal */
-  --color-accent-400: #2dd4bf;
-  --color-accent-500: #14b8a6;
-  --color-accent-600: #0d9488;
+  /* Accent - Teal/Cyan (logo circle color) */
+  --color-accent-400: #29C4BF;
+  --color-accent-500: #1aaead;
+  --color-accent-600: #118885;
 
   /* Neutrals */
   --color-neutral-50: #fafafa;

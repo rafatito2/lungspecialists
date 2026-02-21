@@ -82,8 +82,8 @@ interface Props {
 }
 
 export default function MedicalBackground({ variant = 'light' }: Props) {
-  const baseOpacity = variant === 'dark' ? 0.14 : 0.06;
-  const color = variant === 'dark' ? 'white' : '#2563eb';
+  const baseOpacity = variant === 'dark' ? 0.14 : 0.07;
+  const color = variant === 'dark' ? 'white' : '#29C4BF';
 
   return (
     <div

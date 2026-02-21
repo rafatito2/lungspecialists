@@ -5,6 +5,7 @@ export interface Doctor {
   role: string;
   bio: string;
   credentials: string[];
+  image?: string;
 }
 
 export const doctors: Doctor[] = [
@@ -24,6 +25,7 @@ export const doctors: Doctor[] = [
   {
     id: "dr-palma",
     name: "Dr. Eric Palma",
+    image: "/dr_palma.png",
     title: "MD",
     role: "Partner & Pulmonologist",
     bio: `Dr. Eric Palma is a board-certified pulmonologist who brings years of experience and expertise to our practice. He is committed to staying at the forefront of pulmonary medicine and providing the highest quality care to patients throughout South Florida.`,
