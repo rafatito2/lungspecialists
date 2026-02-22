@@ -174,8 +174,8 @@ export default function AboutPage() {
               style={{ border: "1px solid #f0f0f0" }}
             >
               {[
-                { value: "FCCP", label: "Fellow, American College\nof Chest Physicians" },
-                { value: "ABIM", label: "American Board of\nInternal Medicine" },
+                { value: "20+", label: "Years of\nClinical Experience" },
+                { value: "Multi", label: "Board-Certified\nPhysicians" },
                 { value: "On-site", label: "Pulmonary &\nSleep Diagnostics" },
                 { value: "South FL", label: "Fort Lauderdale\n& Broward County" },
               ].map((stat, i) => (
@@ -187,7 +187,7 @@ export default function AboutPage() {
                   }}
                 >
                   <div
-                    className="about-serif text-3xl stat-num"
+                    className="text-3xl font-bold tracking-tight stat-num"
                     style={{ color: "#2B56C5" }}
                   >
                     {stat.value}
