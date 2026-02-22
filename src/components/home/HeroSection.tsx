@@ -46,7 +46,7 @@ export default function HeroSection() {
             api.getCameraLookAt(function (err: any, camera: any) {
               if (err) return;
               const { position, target } = camera;
-              const factor = 0.3;
+              const factor = 0.33;
               api.setCameraLookAt(
                 [
                   target[0] + (position[0] - target[0]) * factor,
