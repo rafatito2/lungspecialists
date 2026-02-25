@@ -12,6 +12,7 @@ export const doctors: Doctor[] = [
   {
     id: "dr-fishman",
     name: "Dr. David Romero Fischmann",
+    image: "/dr_david.png",
     title: "MD",
     role: "Owner & Pulmonologist",
     bio: `Dr. David Romero-Fischmann is a South Florida pulmonologist with subspecialties in Critical Care Medicine, Pulmonary Disease, and Sleep Medicine. He trained at Mount Sinai Medical Center of Florida and completed fellowships in Pulmonary Disease, Critical Care, and Sleep Medicine. He has co-authored publications on tuberculosis and atypical disease cases, and has been recognized as one of America's top physicians in pulmonary and critical care.`,
