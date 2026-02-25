@@ -25,11 +25,11 @@ export const doctors: Doctor[] = [
   },
   {
     id: "dr-palma",
-    name: "Dr. Eric Palma",
+    name: "Dr. Erick Palma",
     image: "/dr_palma.png",
     title: "MD",
     role: "Partner & Pulmonologist",
-    bio: `Dr. Eric Palma is a board-certified pulmonologist and critical care medicine specialist with over 20 years of experience. He earned his medical degree from the Universidad de Panama Faculty of Medicine and completed his Internal Medicine residency at the University of Miami Affiliated Hospitals, followed by a fellowship in Pulmonary & Critical Care Medicine at the University of Miami and an additional fellowship at Mount Sinai Medical Center.`,
+    bio: `Dr. Erick Palma is a board-certified pulmonologist and critical care medicine specialist with over 20 years of experience. He earned his medical degree from the Universidad de Panama Faculty of Medicine and completed his Internal Medicine residency at the University of Miami Affiliated Hospitals, followed by a fellowship in Pulmonary & Critical Care Medicine at the University of Miami and an additional fellowship at Mount Sinai Medical Center.`,
     credentials: [
       "Board Certified in Pulmonary Disease",
       "Board Certified in Critical Care Medicine",

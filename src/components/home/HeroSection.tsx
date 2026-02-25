@@ -3,73 +3,16 @@
 import { useEffect, useRef } from 'react';
 import Container from "@/components/ui/Container";
 import MedicalBackground from "@/components/ui/MedicalBackground";
+import { useLungViewer } from "@/components/providers/LungViewerProvider";
 
 export default function HeroSection() {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const placeholderRef = useRef<HTMLDivElement>(null);
+  const { registerPlaceholder } = useLungViewer();
 
   useEffect(() => {
-    const iframe = iframeRef.current;
-    if (!iframe) return;
-
-    const script = document.createElement('script');
-    script.src = 'https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js';
-    script.async = true;
-
-    script.onload = () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const SF = (window as any).Sketchfab;
-      if (!SF) return;
-
-      const client = new SF(iframe);
-      client.init('bb3e70596ec24289b355fb075222a354', {
-        autospin: 1,
-        autostart: 1,
-        transparent: 1,
-        ui_hint: 0,
-        ui_watermark: 0,
-        ui_watermark_link: 0,
-        ui_infos: 0,
-        ui_stop: 0,
-        ui_controls: 0,
-        ui_ar: 0,
-        ui_vr: 0,
-        ui_help: 0,
-        ui_settings: 0,
-        ui_fullscreen: 0,
-        ui_annotations: 0,
-        ui_inspector: 0,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        success: function (api: any) {
-          api.start();
-          api.addEventListener('viewerready', function () {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            api.getCameraLookAt(function (err: any, camera: any) {
-              if (err) return;
-              const { position, target } = camera;
-              const factor = 0.33;
-              api.setCameraLookAt(
-                [
-                  target[0] + (position[0] - target[0]) * factor,
-                  target[1] + (position[1] - target[1]) * factor,
-                  target[2] + (position[2] - target[2]) * factor,
-                ],
-                target,
-                0.8
-              );
-            });
-          });
-        },
-        error: function () {
-          console.error('Sketchfab viewer failed to initialise');
-        },
-      });
-    };
-
-    document.head.appendChild(script);
-    return () => {
-      if (document.head.contains(script)) document.head.removeChild(script);
-    };
-  }, []);
+    registerPlaceholder(placeholderRef.current);
+    return () => registerPlaceholder(null);
+  }, [registerPlaceholder]);
 
   return (
     <section
@@ -214,23 +157,9 @@ export default function HeroSection() {
                 }}
               />
 
-              {/* iframe container — clips Sketchfab UI, renders above the circle */}
-              <div className="absolute inset-0 overflow-hidden">
-                <iframe
-                  ref={iframeRef}
-                  title="LUNGS"
-                  className="absolute"
-                  style={{
-                    width: 'calc(120% + 60px)',
-                    left: '-45px',
-                    height: 'calc(85% + 90px)',
-                    top: '-50px',
-                  }}
-                  frameBorder="0"
-                  allowFullScreen
-                  allow="autoplay; fullscreen; xr-spatial-tracking"
-                />
-              </div>
+              {/* Placeholder — the persistent iframe from LungViewerProvider is
+                  positioned over this div so it never reloads on navigation */}
+              <div ref={placeholderRef} className="absolute inset-0" />
 
             </div>
           </div>

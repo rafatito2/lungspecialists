@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
+import { LungViewerProvider } from "@/components/providers/LungViewerProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Lung Disease Specialists",
   },
   description:
-    "Board-certified pulmonary and sleep medicine specialists in Fort Lauderdale, FL. Dr. David Romero Fischmann and Dr. Eric Palma provide expert care for lung conditions, sleep disorders, and pulmonary function testing.",
+    "Board-certified pulmonary and sleep medicine specialists in Fort Lauderdale, FL. Dr. David Romero Fischmann and Dr. Erick Palma provide expert care for lung conditions, sleep disorders, and pulmonary function testing.",
   keywords: [
     "pulmonary doctor Fort Lauderdale",
     "sleep medicine Fort Lauderdale",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     "pulmonary function test",
     "sleep study Fort Lauderdale",
     "Dr David Romero Fischmann",
-    "Dr Eric Palma",
+    "Dr Erick Palma",
     "Lung Disease Specialists",
   ],
   openGraph: {
@@ -53,14 +54,16 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        <ScrollToTop />
-        <Header />
+        <LungViewerProvider>
+          <ScrollToTop />
+          <Header />
 
-        <main id="main-content" className="min-h-screen">
-          {children}
-        </main>
+          <main id="main-content" className="min-h-screen">
+            {children}
+          </main>
 
-        <Footer />
+          <Footer />
+        </LungViewerProvider>
       </body>
     </html>
   );

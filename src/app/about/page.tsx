@@ -7,7 +7,7 @@ import { doctors } from "@/data/doctors";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Meet Dr. David Romero Fischmann and Dr. Eric Palma, board-certified pulmonologists at Lung Disease Specialists in Fort Lauderdale, FL. Learn about our practice and commitment to patient care.",
+    "Meet Dr. David Romero Fischmann and Dr. Erick Palma, board-certified pulmonologists at Lung Disease Specialists in Fort Lauderdale, FL. Learn about our practice and commitment to patient care.",
 };
 
 const values = [
