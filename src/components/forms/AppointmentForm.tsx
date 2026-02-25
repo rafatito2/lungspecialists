@@ -24,7 +24,7 @@ const visitReasons = [
 const preferredTimes = [
   { value: "", label: "No preference" },
   { value: "morning", label: "Morning (9 AM – 12 PM)" },
-  { value: "afternoon", label: "Afternoon (12 PM – 5 PM)" },
+  { value: "afternoon", label: "Afternoon (1 PM – 5 PM)" },
 ];
 
 const inputClass =
