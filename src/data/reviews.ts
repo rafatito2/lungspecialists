@@ -11,7 +11,7 @@ export const reviews: Review[] = [
     id: "1",
     name: "Maria S.",
     rating: 5,
-    text: "Dr. Fishman and his team are incredibly professional and caring. They took the time to explain my condition and treatment options. Highly recommend!",
+    text: "Dr. Fischmann and his team are incredibly professional and caring. They took the time to explain my condition and treatment options. Highly recommend!",
     date: "January 2025",
   },
   {
