@@ -102,9 +102,9 @@ export default async function Image() {
         {/* Logo */}
         <img
           src={logoSrc}
-          width={195}
-          height={195}
-          style={{ borderRadius: 30, opacity: 0.93 }}
+          width={280}
+          height={280}
+          style={{ borderRadius: 36, opacity: 0.93 }}
         />
       </div>
     ),
