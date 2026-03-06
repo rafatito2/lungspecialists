@@ -11,17 +11,17 @@ export default function JsonLd() {
     /* ── Practice ─────────────────────────────────────────── */
     {
       "@type": ["MedicalOrganization", "LocalBusiness"],
-      "@id": "https://lungdiseasespecialists.com/#organization",
+      "@id": "https://diseasespecialist.com/#organization",
       name: "Lung Disease Specialists Corporation",
       alternateName: "Lung Disease Specialists",
-      url: "https://lungdiseasespecialists.com",
+      url: "https://diseasespecialist.com",
       telephone: "+19547716047",
       faxNumber: "+19547712927",
       email: "lungdr123@gmail.com",
-      image: "https://lungdiseasespecialists.com/lung_logo.png",
+      image: "https://diseasespecialist.com/lung_logo.png",
       logo: {
         "@type": "ImageObject",
-        url: "https://lungdiseasespecialists.com/lung_logo.png",
+        url: "https://diseasespecialist.com/lung_logo.png",
       },
       description:
         "Board-certified pulmonary and sleep medicine specialists in Fort Lauderdale, FL. Expert care for lung conditions, sleep disorders, and pulmonary function testing.",
@@ -93,7 +93,7 @@ export default function JsonLd() {
     /* ── Dr. David Romero Fischmann ───────────────────────── */
     {
       "@type": "Physician",
-      "@id": "https://lungdiseasespecialists.com/#dr-fischmann",
+      "@id": "https://diseasespecialist.com/#dr-fischmann",
       name: "Dr. David Romero Fischmann",
       givenName: "David",
       familyName: "Romero Fischmann",
@@ -108,16 +108,16 @@ export default function JsonLd() {
         "Sleep Medicine",
       ],
       worksFor: {
-        "@id": "https://lungdiseasespecialists.com/#organization",
+        "@id": "https://diseasespecialist.com/#organization",
       },
-      image: "https://lungdiseasespecialists.com/dr_david.png",
+      image: "https://diseasespecialist.com/dr_david.png",
       alumniOf: "Mount Sinai Medical Center of Florida",
     },
 
     /* ── Dr. Erick Palma ──────────────────────────────────── */
     {
       "@type": "Physician",
-      "@id": "https://lungdiseasespecialists.com/#dr-palma",
+      "@id": "https://diseasespecialist.com/#dr-palma",
       name: "Dr. Erick Palma",
       givenName: "Erick",
       familyName: "Palma",
@@ -131,9 +131,9 @@ export default function JsonLd() {
         "Critical Care Medicine",
       ],
       worksFor: {
-        "@id": "https://lungdiseasespecialists.com/#organization",
+        "@id": "https://diseasespecialist.com/#organization",
       },
-      image: "https://lungdiseasespecialists.com/dr_palma.png",
+      image: "https://diseasespecialist.com/dr_palma.png",
       alumniOf: [
         "Universidad de Panama Faculty of Medicine",
         "University of Miami",
@@ -144,13 +144,13 @@ export default function JsonLd() {
     /* ── WebSite ──────────────────────────────────────────── */
     {
       "@type": "WebSite",
-      "@id": "https://lungdiseasespecialists.com/#website",
-      url: "https://lungdiseasespecialists.com",
+      "@id": "https://diseasespecialist.com/#website",
+      url: "https://diseasespecialist.com",
       name: "Lung Disease Specialists",
       description:
         "Official website of Lung Disease Specialists Corporation — pulmonary and sleep medicine practice in Fort Lauderdale, FL.",
       publisher: {
-        "@id": "https://lungdiseasespecialists.com/#organization",
+        "@id": "https://diseasespecialist.com/#organization",
       },
       inLanguage: "en-US",
     },

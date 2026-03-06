@@ -15,7 +15,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://lungdiseasespecialists.com"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://diseasespecialist.com"
   ),
 
   /* ── Titles ──────────────────────────────────────────────── */
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://lungdiseasespecialists.com",
+    url: "https://diseasespecialist.com",
     siteName: "Lung Disease Specialists",
     title:
       "Lung Disease Specialists | Pulmonary & Sleep Medicine | Fort Lauderdale, FL",
