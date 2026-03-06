@@ -1,9 +1,25 @@
+import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
 import LocationHighlight from "@/components/home/LocationHighlight";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import ReviewsSection from "@/components/home/ReviewsSection";
 import Container from "@/components/ui/Container";
 import MedicalBackground from "@/components/ui/MedicalBackground";
+
+export const metadata: Metadata = {
+  title:
+    "Lung Disease Specialists | Pulmonary & Sleep Medicine | Fort Lauderdale, FL",
+  description:
+    "Board-certified pulmonary and sleep medicine specialists serving Fort Lauderdale and Broward County, FL. Dr. David Romero Fischmann and Dr. Erick Palma treat asthma, COPD, sleep apnea, and more. On-site pulmonary function testing and sleep studies.",
+  alternates: { canonical: "https://lungdiseasespecialists.com" },
+  openGraph: {
+    url: "https://lungdiseasespecialists.com",
+    title:
+      "Lung Disease Specialists | Pulmonary & Sleep Medicine | Fort Lauderdale, FL",
+    description:
+      "Board-certified pulmonologists in Fort Lauderdale, FL. Expert care for lung conditions and sleep disorders. New patients welcome — call (954) 771-6047.",
+  },
+};
 
 export default function HomePage() {
   return (

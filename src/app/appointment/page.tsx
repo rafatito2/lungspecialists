@@ -8,9 +8,16 @@ import ReviewQRCode from "@/components/ui/ReviewQRCode";
 const CUREMD_URL = "https://app4.curemd.net/PatientPortal/";
 
 export const metadata: Metadata = {
-  title: "Request an Appointment",
+  title: "Request an Appointment — Pulmonologist in Fort Lauderdale, FL",
   description:
-    "Request an appointment with Lung Disease Specialists in Fort Lauderdale, FL. Our team will contact you to confirm your pulmonary or sleep medicine consultation.",
+    "Request an appointment with Lung Disease Specialists in Fort Lauderdale, FL. Our team will contact you to confirm your pulmonary or sleep medicine consultation. New patients welcome — call (954) 771-6047.",
+  alternates: { canonical: "https://lungdiseasespecialists.com/appointment" },
+  openGraph: {
+    url: "https://lungdiseasespecialists.com/appointment",
+    title: "Request an Appointment | Lung Disease Specialists — Fort Lauderdale, FL",
+    description:
+      "Schedule a pulmonary or sleep medicine consultation with board-certified specialists in Fort Lauderdale, FL. New patients welcome. Request online or call (954) 771-6047.",
+  },
 };
 
 const steps = [

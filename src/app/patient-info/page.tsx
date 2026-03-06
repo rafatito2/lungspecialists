@@ -4,9 +4,16 @@ import MedicalBackground from "@/components/ui/MedicalBackground";
 import { insuranceProviders, insuranceNote } from "@/data/insurance";
 
 export const metadata: Metadata = {
-  title: "Patient Information",
+  title: "Patient Information & Accepted Insurance — Fort Lauderdale, FL",
   description:
-    "Find important patient information including accepted insurance plans, office location in Fort Lauderdale, contact details, fax number, and office hours.",
+    "Patient information for Lung Disease Specialists in Fort Lauderdale, FL. Find accepted insurance plans, office location (6405 N Federal Hwy, Suite 405), contact details, fax number, and office hours.",
+  alternates: { canonical: "https://lungdiseasespecialists.com/patient-info" },
+  openGraph: {
+    url: "https://lungdiseasespecialists.com/patient-info",
+    title: "Patient Information & Insurance | Lung Disease Specialists — Fort Lauderdale, FL",
+    description:
+      "Accepted insurance plans, office location, contact info, and patient policies for Lung Disease Specialists in Fort Lauderdale, FL. Office: 6405 N Federal Hwy, Suite 405.",
+  },
 };
 
 const policies = [
