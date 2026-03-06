@@ -3,6 +3,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import MedicalBackground from "@/components/ui/MedicalBackground";
 import { doctors } from "@/data/doctors";
+import DoctorsMobile from "@/components/about/DoctorsMobile";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -331,11 +332,11 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="swipe-track md:grid md:grid-cols-3 md:gap-6 max-w-4xl mx-auto">
               {values.map((val) => (
                 <div
                   key={val.title}
-                  className="value-card rounded-2xl p-8"
+                  className="swipe-card value-card rounded-2xl p-8"
                   style={{
                     border: "1px solid #f0f0f0",
                     background: "white",
@@ -406,7 +407,13 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+            {/* Mobile: expandable accordion cards */}
+            <div className="md:hidden max-w-lg mx-auto">
+              <DoctorsMobile />
+            </div>
+
+            {/* Tablet/Desktop: side-by-side grid */}
+            <div className="hidden md:grid md:grid-cols-2 md:gap-8 max-w-4xl mx-auto">
               {doctors.map((doctor) => (
                 <article
                   key={doctor.id}

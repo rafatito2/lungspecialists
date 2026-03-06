@@ -4,7 +4,6 @@ export interface InsuranceProvider {
 
 export const insuranceProviders: InsuranceProvider[] = [
   { name: "Aetna" },
-  { name: "AvMed" },
   { name: "Blue Cross" },
   { name: "Cigna" },
   { name: "Devoted Healthcare" },
@@ -18,8 +17,6 @@ export const insuranceProviders: InsuranceProvider[] = [
   { name: "Molina" },
   { name: "Multi Plan" },
   { name: "Oscar" },
-  { name: "Preferred Care Partners" },
-  { name: "Simply" },
   { name: "Sunshine Health" },
   { name: "Tricare" },
   { name: "United" },

@@ -107,7 +107,7 @@ export default function PatientInfoPage() {
           }}
         >
           <MedicalBackground variant="dark" />
-          <Container className="relative py-20 md:py-28">
+          <Container className="relative py-12 md:py-28">
             <div className="max-w-2xl">
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-10 flex-shrink-0" style={{ background: "#29C4BF" }} />
@@ -115,7 +115,7 @@ export default function PatientInfoPage() {
                   Before Your Visit
                 </span>
               </div>
-              <h1 className="pi-serif text-5xl md:text-6xl leading-[1.1] text-white mb-5">
+              <h1 className="pi-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-5">
                 Patient<br /><em>Information</em>
               </h1>
               <p className="text-lg max-w-lg" style={{ color: "rgba(255,255,255,0.72)", lineHeight: "1.8" }}>
@@ -148,7 +148,112 @@ export default function PatientInfoPage() {
               </h2>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-2 max-w-5xl mx-auto">
+            {/* ── Mobile contact layout ──────────────────────────────── */}
+            <div className="md:hidden max-w-lg mx-auto space-y-3">
+
+              {/* Tap-to-call CTA */}
+              <a
+                href="tel:+19547716047"
+                className="w-full flex items-center justify-between px-5 py-4 rounded-2xl"
+                style={{ background: "linear-gradient(135deg, #1a3888 0%, #2B56C5 60%, #29C4BF 100%)" }}
+              >
+                <div>
+                  <p className="text-[10px] font-bold tracking-[0.2em] uppercase mb-0.5" style={{ color: "rgba(255,255,255,0.55)" }}>
+                    Call Us Now
+                  </p>
+                  <p className="text-xl font-bold text-white">(954) 771-6047</p>
+                </div>
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(255,255,255,0.15)" }}
+                >
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+                </div>
+              </a>
+
+              {/* Info card */}
+              <div
+                className="bg-white rounded-2xl overflow-hidden"
+                style={{ boxShadow: "0 2px 16px -4px rgba(43,86,197,0.08)", border: "1px solid #f0f0f0" }}
+              >
+                {/* Address */}
+                <div className="flex items-start gap-3 p-5">
+                  <div
+                    className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
+                    style={{ background: "#eef9f9" }}
+                  >
+                    <svg className="w-4 h-4" fill="#29C4BF" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[10px] font-bold tracking-[0.18em] uppercase mb-1" style={{ color: "#a3a3a3" }}>Office Location</p>
+                    <p className="text-sm font-semibold mb-0.5" style={{ color: "#122868" }}>6405 N Federal Hwy, Suite 405</p>
+                    <p className="text-sm mb-2" style={{ color: "#737373" }}>Fort Lauderdale, FL 33308</p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=6405+N+Federal+Hwy+Suite+405+Fort+Lauderdale+FL+33308"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold"
+                      style={{ color: "#2B56C5" }}
+                    >
+                      Get Directions
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Fax */}
+                <div className="px-5 py-4" style={{ background: "linear-gradient(135deg, #eef9f9 0%, #f0f4ff 100%)", borderTop: "1px solid #f5f5f5", borderBottom: "1px solid #f5f5f5" }}>
+                  <p className="text-[10px] font-bold tracking-[0.18em] uppercase mb-1" style={{ color: "#29C4BF" }}>Fax — Referrals &amp; Records</p>
+                  <p className="text-lg font-bold" style={{ color: "#122868" }}>(954) 771-2927</p>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center gap-3 p-5">
+                  <div
+                    className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ background: "#eef2fb" }}
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="#2B56C5" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-bold tracking-[0.18em] uppercase mb-0.5" style={{ color: "#a3a3a3" }}>Email</p>
+                    <a href="mailto:lungdr123@gmail.com" className="text-sm font-semibold" style={{ color: "#122868" }}>
+                      lungdr123@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="p-5" style={{ borderTop: "1px solid #f5f5f5" }}>
+                  <p className="text-[10px] font-bold tracking-[0.18em] uppercase mb-3" style={{ color: "#a3a3a3" }}>Office Hours</p>
+                  <div className="space-y-1.5">
+                    {[
+                      { day: "Monday – Friday", hours: "9:00 AM – 5:00 PM", open: true },
+                      { day: "Saturday – Sunday", hours: "Closed", open: false },
+                    ].map((row) => (
+                      <div key={row.day} className="flex items-center justify-between">
+                        <span className="text-sm" style={{ color: "#525252" }}>{row.day}</span>
+                        <span className="text-sm font-semibold" style={{ color: row.open ? "#122868" : "#a3a3a3" }}>
+                          {row.hours}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* ── Desktop two-card grid (md+) ────────────────────────── */}
+            <div className="hidden md:grid gap-6 lg:grid-cols-2 max-w-5xl mx-auto">
 
               {/* Location card */}
               <div
@@ -310,11 +415,11 @@ export default function PatientInfoPage() {
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+            <div className="swipe-track md:grid md:grid-cols-3 md:gap-6 max-w-5xl mx-auto">
               {policies.map((policy) => (
                 <div
                   key={policy.title}
-                  className="policy-card bg-white rounded-2xl p-7"
+                  className="swipe-card policy-card bg-white rounded-2xl p-7"
                   style={{ boxShadow: "0 2px 16px -4px rgba(43, 86, 197, 0.07)", border: "1px solid #f0f0f0" }}
                 >
                   <div
@@ -356,12 +461,12 @@ export default function PatientInfoPage() {
             </div>
 
             {/* Insurance grid */}
-            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto mb-8">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto mb-8">
               {insuranceProviders.map((provider) => (
                 <div
                   key={provider.name}
-                  className="insurance-pill bg-white rounded-xl px-4 py-3 flex items-center gap-2.5"
-                  style={{ border: "1px solid #f0f0f0", boxShadow: "0 1px 4px rgba(43,86,197,0.04)" }}
+                  className="insurance-pill bg-white rounded-xl px-4 flex items-center gap-2.5"
+                  style={{ border: "1px solid #f0f0f0", boxShadow: "0 1px 4px rgba(43,86,197,0.04)", minHeight: "3rem" }}
                 >
                   <span
                     className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
@@ -414,7 +519,7 @@ export default function PatientInfoPage() {
 
         {/* ── CTA ──────────────────────────────────────────── */}
         <section
-          className="relative overflow-hidden py-24"
+          className="relative overflow-hidden py-16 md:py-24"
           style={{
             background: "linear-gradient(140deg, #0d1f52 0%, #1a3888 35%, #2B56C5 68%, #1aaead 100%)",
           }}

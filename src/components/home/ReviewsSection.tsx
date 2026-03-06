@@ -58,11 +58,11 @@ export default function ReviewsSection() {
         </div>
 
         {/* Reviews grid */}
-        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="swipe-track md:grid md:grid-cols-2 md:gap-6 max-w-4xl mx-auto">
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="review-card bg-white rounded-2xl p-7"
+              className="swipe-card review-card bg-white rounded-2xl p-7"
               style={{ boxShadow: "0 2px 16px -4px rgba(43, 86, 197, 0.08)" }}
             >
               {/* Decorative large quote mark */}

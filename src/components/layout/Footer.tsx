@@ -98,9 +98,11 @@ export default function Footer() {
               <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-1">
                 Office Hours
               </h4>
-              <p className="text-neutral-500 text-sm">
-                Monday – Friday: 9:00 AM – 5:00 PM &nbsp;|&nbsp; Saturday – Sunday: Closed
-              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 text-neutral-500 text-sm">
+                <span>Monday – Friday: 9:00 AM – 5:00 PM</span>
+                <span className="hidden sm:inline text-neutral-700">|</span>
+                <span>Saturday – Sunday: Closed</span>
+              </div>
             </div>
             <p className="text-neutral-600 text-sm">
               &copy; {new Date().getFullYear()} Lung Disease Specialists Corporation. All rights reserved.

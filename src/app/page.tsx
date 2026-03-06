@@ -98,7 +98,7 @@ export default function HomePage() {
 
         {/* ── Final CTA ──────────────────────────────────── */}
         <section
-          className="relative overflow-hidden py-24"
+          className="relative overflow-hidden py-16 md:py-24"
           style={{
             background:
               "linear-gradient(140deg, #0d1f52 0%, #1a3888 35%, #2B56C5 68%, #1aaead 100%)",

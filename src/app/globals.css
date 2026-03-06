@@ -102,3 +102,60 @@ body {
   transform: translateX(-50%);
   top: 1rem;
 }
+
+/* ── Mobile swipe carousels ────────────────────────────────────────────────
+   On mobile the track becomes a horizontal flex scroll with snap.
+   At md+ the existing Tailwind grid classes take over (display: grid).      */
+@media (max-width: 767px) {
+  .swipe-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .swipe-track::-webkit-scrollbar { display: none; }
+  .swipe-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    min-width: 0;
+  }
+}
+
+/* ── Hero section: 2-column layout + animation ─────────────────────────────
+   Shown only when the device is in landscape at tablet width (≥ 1024 px) or
+   on desktop. This hides the animation on portrait tablets and all phones.  */
+.hero-anim-col {
+  display: none;
+}
+.hero-grid {
+  gap: 3rem; /* matches gap-12; no columns visible on mobile/portrait */
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .hero-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+  }
+  .hero-anim-col {
+    display: flex;
+  }
+}
+
+/* Nudge animation left on iPad landscape (1024–1400 px); desktop is unchanged */
+@media (min-width: 1024px) and (max-width: 1400px) and (orientation: landscape) {
+  .hero-anim-col {
+    padding-right: 2.5rem;
+  }
+}
+
+/* iPad mini landscape (both gens ≤ 1140 px wide, short viewport) —
+   align animation to the top of the row so it sits higher           */
+@media (min-width: 1024px) and (max-width: 1140px) and (orientation: landscape) {
+  .hero-anim-col {
+    align-self: start;
+    margin-top: 1.5rem;
+  }
+}

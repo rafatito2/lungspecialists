@@ -81,11 +81,11 @@ export default function ServicesOverview() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+        <div className="swipe-track md:grid md:grid-cols-3 md:gap-6 max-w-5xl mx-auto">
           {services.map((service) => (
             <div
               key={service.id}
-              className="svc-card rounded-2xl p-8 bg-white"
+              className="swipe-card svc-card rounded-2xl p-8 bg-white"
               style={{ border: "1px solid #f0f0f0" }}
             >
               {/* Icon */}

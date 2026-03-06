@@ -110,6 +110,8 @@ export function LungViewerProvider({ children }: { children: ReactNode }) {
     const el = placeholderRef.current;
     if (!el) { setRect(null); return; }
     const r = el.getBoundingClientRect();
+    // Element is hidden via CSS (e.g. display:none on mobile) — treat as absent
+    if (r.width === 0 || r.height === 0) { setRect(null); return; }
     setRect({
       top: r.top + window.scrollY,
       left: r.left + window.scrollX,

@@ -61,7 +61,7 @@ export default function AppointmentPage() {
           }}
         >
           <MedicalBackground variant="dark" />
-          <Container className="relative py-20 md:py-28">
+          <Container className="relative py-12 md:py-28">
             <div className="max-w-2xl">
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-10 flex-shrink-0" style={{ background: "#29C4BF" }} />
@@ -69,7 +69,7 @@ export default function AppointmentPage() {
                   New Patients Welcome
                 </span>
               </div>
-              <h1 className="appt-serif text-5xl md:text-6xl leading-[1.1] text-white mb-5">
+              <h1 className="appt-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-5">
                 Request an<br /><em>Appointment</em>
               </h1>
               <p className="text-lg max-w-lg" style={{ color: "rgba(255,255,255,0.72)", lineHeight: "1.8" }}>
@@ -95,6 +95,58 @@ export default function AppointmentPage() {
 
               {/* ── Left: form ─────────────────────────────── */}
               <div>
+
+                {/* Mobile-only: What to Expect steps */}
+                <div
+                  className="lg:hidden bg-white rounded-2xl p-5 mb-4"
+                  style={{ boxShadow: "0 2px 16px -4px rgba(43,86,197,0.08)" }}
+                >
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="h-px w-6 flex-shrink-0" style={{ background: "#29C4BF" }} />
+                    <span className="text-[10px] font-bold tracking-[0.18em] uppercase" style={{ color: "#29C4BF" }}>
+                      What to Expect
+                    </span>
+                  </div>
+                  <div className="space-y-4">
+                    {steps.map((step, i) => (
+                      <div key={step.num} className="flex gap-3">
+                        <div
+                          className="appt-serif text-base flex-shrink-0 w-7 leading-none pt-0.5"
+                          style={{ color: i === 0 ? "#2B56C5" : "#d5e1f7" }}
+                        >
+                          {step.num}
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold mb-0.5" style={{ color: "#122868" }}>{step.title}</p>
+                          <p className="text-xs leading-relaxed" style={{ color: "#737373" }}>{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile-only: Tap-to-call strip */}
+                <a
+                  href="tel:+19547716047"
+                  className="lg:hidden w-full flex items-center justify-between px-5 py-4 rounded-2xl mb-6"
+                  style={{ background: "linear-gradient(135deg, #1a3888 0%, #2B56C5 60%, #29C4BF 100%)" }}
+                >
+                  <div>
+                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase mb-0.5" style={{ color: "rgba(255,255,255,0.55)" }}>
+                      Prefer to call?
+                    </p>
+                    <p className="text-xl font-bold text-white">(954) 771-6047</p>
+                    <p className="text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.6)" }}>Mon – Fri · 9 AM – 5 PM</p>
+                  </div>
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ background: "rgba(255,255,255,0.15)" }}
+                  >
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    </svg>
+                  </div>
+                </a>
 
                 {/* CureMD Online Booking card */}
                 <div
@@ -177,9 +229,9 @@ export default function AppointmentPage() {
                   <AppointmentForm />
                 </div>
 
-                {/* Alternative contact */}
+                {/* Alternative contact — desktop only (mobile has tap-to-call strip above) */}
                 <div
-                  className="mt-7 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+                  className="hidden lg:flex mt-7 rounded-xl p-5 flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
                   style={{ background: "white", border: "1px solid #f0f0f0" }}
                 >
                   <p className="text-sm" style={{ color: "#737373" }}>
@@ -203,7 +255,7 @@ export default function AppointmentPage() {
               </div>
 
               {/* ── Right: sidebar ─────────────────────────── */}
-              <div className="space-y-5 lg:sticky lg:top-8">
+              <div className="hidden lg:block space-y-5 lg:sticky lg:top-8">
 
                 {/* What to expect */}
                 <div

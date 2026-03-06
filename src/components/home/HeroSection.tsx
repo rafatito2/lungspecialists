@@ -24,7 +24,7 @@ export default function HeroSection() {
       <MedicalBackground variant="dark" />
 
       <Container className="relative">
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-8 items-center py-24 md:py-32">
+        <div className="hero-grid grid items-center py-16 sm:py-20 md:py-24 lg:py-32">
 
           {/* ── Left: text ─────────────────────────────── */}
           <div>
@@ -41,7 +41,7 @@ export default function HeroSection() {
 
             {/* Headline */}
             <h1
-              className="home-serif text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] text-white mb-6"
+              className="home-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] text-white mb-6"
             >
               Expert Pulmonary<br />
               <em>&amp; Sleep Medicine</em><br />
@@ -133,7 +133,7 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right: 3D lung model ────────────────────── */}
-          <div className="relative flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
+          <div className="hero-anim-col relative items-center justify-center lg:justify-end">
             <div className="relative w-full max-w-xl aspect-square">
 
               {/* Outer soft halo */}
