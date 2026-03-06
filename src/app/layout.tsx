@@ -96,13 +96,6 @@ export const metadata: Metadata = {
     },
   },
 
-  /* ── Icons / Favicon ─────────────────────────────────────── */
-  icons: {
-    icon: "/lung_logo.png",
-    shortcut: "/lung_logo.png",
-    apple: "/lung_logo.png",
-  },
-
   /* ── Author / category ───────────────────────────────────── */
   authors: [{ name: "Lung Disease Specialists Corporation" }],
   category: "Medical Practice",
