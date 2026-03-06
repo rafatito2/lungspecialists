@@ -34,10 +34,31 @@ const labelClass =
 
 export default function AppointmentForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    setIsLoading(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch("/api/appointment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Server error");
+      setFormSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or call us directly.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (formSubmitted) {
@@ -105,10 +126,14 @@ export default function AppointmentForm() {
         .appt-submit {
           transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
-        .appt-submit:hover {
+        .appt-submit:hover:not(:disabled) {
           transform: translateY(-2px);
           box-shadow: 0 8px 24px rgba(43, 86, 197, 0.3);
           background: #1a3888 !important;
+        }
+        .appt-submit:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
         }
       `}</style>
 
@@ -268,17 +293,43 @@ export default function AppointmentForm() {
           />
         </div>
 
+        {/* Error message */}
+        {error && (
+          <div
+            className="rounded-xl p-4 flex items-start gap-3"
+            style={{ background: "#fff1f2", border: "1px solid #fecdd3" }}
+          >
+            <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="#ef4444" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+            <p className="text-sm" style={{ color: "#be123c" }}>{error}</p>
+          </div>
+        )}
+
         {/* Submit */}
         <div className="pt-2">
           <button
             type="submit"
+            disabled={isLoading}
             className="appt-submit w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-semibold"
             style={{ background: "#2B56C5", color: "white" }}
           >
-            Submit Appointment Request
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
+            {isLoading ? (
+              <>
+                <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+                Sending…
+              </>
+            ) : (
+              <>
+                Submit Appointment Request
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </>
+            )}
           </button>
           <p className="mt-4 text-xs" style={{ color: "#a3a3a3" }}>
             <span style={{ color: "#ef4444" }}>*</span> Required fields. We will
