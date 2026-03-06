@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     "Lung Disease Specialists | Pulmonary & Sleep Medicine | Fort Lauderdale, FL",
   description:
     "Board-certified pulmonary and sleep medicine specialists serving Fort Lauderdale and Broward County, FL. Dr. David Romero Fischmann and Dr. Erick Palma treat asthma, COPD, sleep apnea, and more. On-site pulmonary function testing and sleep studies.",
-  alternates: { canonical: "https://diseasespecialist.com" },
+  alternates: { canonical: "https://lungdiseasespecialists.com" },
   openGraph: {
     type: "website",
-    url: "https://diseasespecialist.com",
+    url: "https://lungdiseasespecialists.com",
     title:
       "Lung Disease Specialists | Pulmonary & Sleep Medicine | Fort Lauderdale, FL",
     description:

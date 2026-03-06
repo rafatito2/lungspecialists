@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   title: "Meet Our Pulmonologists — Fort Lauderdale, FL",
   description:
     "Meet Dr. David Romero Fischmann and Dr. Erick Palma — board-certified pulmonologists and critical care specialists at Lung Disease Specialists in Fort Lauderdale, FL. Learn about our evidence-based approach to pulmonary and sleep medicine.",
-  alternates: { canonical: "https://diseasespecialist.com/about" },
+  alternates: { canonical: "https://lungdiseasespecialists.com/about" },
   openGraph: {
-    url: "https://diseasespecialist.com/about",
+    url: "https://lungdiseasespecialists.com/about",
     title: "Meet Our Pulmonologists | Lung Disease Specialists — Fort Lauderdale, FL",
     description:
       "Dr. David Romero Fischmann and Dr. Erick Palma — board-certified pulmonologists in Fort Lauderdale, FL with over 20 years of combined experience in pulmonary and critical care medicine.",

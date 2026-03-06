@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://diseasespecialist.com/sitemap.xml",
-    host: "https://diseasespecialist.com",
+    sitemap: "https://lungdiseasespecialists.com/sitemap.xml",
+    host: "https://lungdiseasespecialists.com",
   };
 }
