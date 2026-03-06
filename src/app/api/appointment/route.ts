@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const ADMIN_EMAIL = "tito2rafael@gmail.com";
 const FROM_ADDRESS = "onboarding@resend.dev"; // replace with your verified domain later
 
@@ -45,6 +43,12 @@ export async function POST(req: Request) {
     afternoon: "Afternoon (1 PM – 5 PM)",
     "": "No preference",
   };
+
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json({ success: false, error: "Email service not configured" }, { status: 503 });
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     // ── 1. Admin notification ───────────────────────────────────────────────
