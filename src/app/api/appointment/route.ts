@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const ADMIN_EMAIL = "tito2rafael@gmail.com";
+const ADMIN_EMAIL = "lungdr123@gmail.com";
 const FROM_ADDRESS = "onboarding@resend.dev"; // replace with your verified domain later
 
 export async function POST(req: Request) {
