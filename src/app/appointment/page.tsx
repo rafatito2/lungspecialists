@@ -4,8 +4,7 @@ import MedicalBackground from "@/components/ui/MedicalBackground";
 import AppointmentForm from "@/components/forms/AppointmentForm";
 import ReviewQRCode from "@/components/ui/ReviewQRCode";
 
-// TODO: Replace with the practice's actual CureMD patient portal URL once provided
-const CUREMD_URL = "https://app4.curemd.net/PatientPortal/";
+const CUREMD_URL = "https://app1.curemd.net/PatientPortal/Registration/PatientUserReg.aspx?vFrom=Agreement";
 
 export const metadata: Metadata = {
   title: "Request an Appointment — Pulmonologist in Fort Lauderdale, FL",
