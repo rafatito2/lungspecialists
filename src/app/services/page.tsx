@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 export const metadata: Metadata = {
   title: "Pulmonary & Sleep Medicine Services — Fort Lauderdale, FL",
   description:
-    "Comprehensive pulmonary care, sleep medicine, sleep studies, and pulmonary function testing in Fort Lauderdale, FL. We treat asthma, COPD, emphysema, sleep apnea, insomnia, and more — all under one roof.",
+    "Comprehensive pulmonary care, sleep medicine, sleep studies, and pulmonary function testing in Fort Lauderdale, FL. We treat asthma, COPD, emphysema, obstructive sleep apnea, obesity hypoventilation, and more — all under one roof.",
   alternates: { canonical: "https://lungdiseasespecialists.com/services" },
   openGraph: {
     url: "https://lungdiseasespecialists.com/services",
@@ -22,7 +22,7 @@ const extras: Record<string, { tags: string[] }> = {
     tags: ["Asthma", "COPD", "Emphysema", "Bronchitis", "Lung Infections", "Interstitial Lung Disease"],
   },
   "sleep-medicine": {
-    tags: ["Sleep Apnea", "Insomnia", "Restless Leg Syndrome", "Narcolepsy"],
+    tags: ["Obstructive Sleep Apnea", "Obesity Hypoventilation", "Cheyne-Stokes Breathing", "At-Home Sleep Studies"],
   },
   "pulmonary-function-testing": {
     tags: ["Spirometry", "Lung Volume Testing", "Diffusion Capacity", "On-site Testing"],

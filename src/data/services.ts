@@ -20,11 +20,11 @@ treatment plans that address their specific needs and improve their quality of l
   {
     id: "sleep-medicine",
     title: "Sleep Medicine & Sleep Studies",
-    shortDescription: "Diagnosis and treatment of sleep disorders with on-site sleep studies.",
-    fullDescription: `We offer comprehensive sleep medicine services including diagnosis and
-treatment of sleep apnea, insomnia, restless leg syndrome, narcolepsy, and other sleep disorders.
-Our office features on-site sleep study facilities for your convenience, allowing us to accurately
-diagnose sleep conditions and develop effective treatment plans.`,
+    shortDescription: "Evaluation and treatment of sleep-related breathing disorders.",
+    fullDescription: `We offer comprehensive evaluation and treatment of sleep-related breathing
+disorders such as obstructive sleep apnea, obesity hypoventilation, and Cheyne-Stokes breathing.
+We feature at-home sleep studies or referrals to nearby in-lab overnight sleep studies, allowing
+us to accurately diagnose conditions and develop an effective treatment plan.`,
     icon: "moon",
   },
   {
